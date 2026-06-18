@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PingRadar — push your URLs to search engines, free</title>
+<meta name="description" content="Self-hosted, free indexing tool. Push your own site to Bing, Yandex, Naver, Seznam and Yep via IndexNow, and surface backlink pages for faster discovery." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav class="nav">
+    <div class="brand"><span class="brand-dot"></span> PingRadar</div>
+    <div class="nav-meta">self-hosted · no tracking · no login</div>
+  </nav>
+
+  <section class="hero" style="border-top:none;">
+    <div class="radar-box">
+      <svg viewBox="0 0 360 360" width="100%" role="img" aria-label="Radar diagram showing your site pinging search engines">
+        <circle cx="180" cy="180" r="140" fill="none" stroke="#232932" stroke-width="1"/>
+        <circle cx="180" cy="180" r="100" fill="none" stroke="#232932" stroke-width="1"/>
+        <circle cx="180" cy="180" r="60"  fill="none" stroke="#232932" stroke-width="1"/>
+
+        <g class="sweep" style="transform-origin:180px 180px;">
+          <path d="M180,180 L180,40 A140,140 0 0 1 301,110 Z" fill="#39ffc4" opacity="0.07"/>
+        </g>
+
+        <line x1="180" y1="180" x2="180" y2="40"  stroke="#1c8f6e" stroke-width="1.5"/>
+        <line x1="180" y1="180" x2="301" y2="110" stroke="#1c8f6e" stroke-width="1.5"/>
+        <line x1="180" y1="180" x2="301" y2="250" stroke="#1c8f6e" stroke-width="1.5"/>
+        <line x1="180" y1="180" x2="180" y2="320" stroke="#1c8f6e" stroke-width="1.5"/>
+        <line x1="180" y1="180" x2="59"  y2="250" stroke="#1c8f6e" stroke-width="1.5"/>
+        <line x1="180" y1="180" x2="59"  y2="110" stroke="#ffb454" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+        <circle cx="180" cy="180" r="26" fill="#181c24" stroke="#39ffc4" stroke-width="1.5"/>
+        <text x="180" y="184" text-anchor="middle" fill="#e7ecf2" font-family="JetBrains Mono" font-size="9">YOU</text>
+
+        <g id="node-bing">
+          <circle cx="180" cy="40" r="20" fill="#181c24" stroke="#1c8f6e" stroke-width="1.5"/>
+          <text x="180" y="44" text-anchor="middle" fill="#8a93a3" font-family="JetBrains Mono" font-size="8.5">Bing</text>
+        </g>
+        <g id="node-yandex">
+          <circle cx="301" cy="110" r="20" fill="#181c24" stroke="#1c8f6e" stroke-width="1.5"/>
+          <text x="301" y="114" text-anchor="middle" fill="#8a93a3" font-family="JetBrains Mono" font-size="8.5">Yandex</text>
+        </g>
+        <g id="node-naver">
+          <circle cx="301" cy="250" r="20" fill="#181c24" stroke="#1c8f6e" stroke-width="1.5"/>
+          <text x="301" y="254" text-anchor="middle" fill="#8a93a3" font-family="JetBrains Mono" font-size="8.5">Naver</text>
+        </g>
+        <g id="node-seznam">
+          <circle cx="180" cy="320" r="20" fill="#181c24" stroke="#1c8f6e" stroke-width="1.5"/>
+          <text x="180" y="324" text-anchor="middle" fill="#8a93a3" font-family="JetBrains Mono" font-size="8">Seznam</text>
+        </g>
+        <g id="node-yep">
+          <circle cx="59" cy="250" r="20" fill="#181c24" stroke="#1c8f6e" stroke-width="1.5"/>
+          <text x="59" y="254" text-anchor="middle" fill="#8a93a3" font-family="JetBrains Mono" font-size="8.5">Yep</text>
+        </g>
+        <g id="node-google">
+          <circle cx="59" cy="110" r="20" fill="#181c24" stroke="#ffb454" stroke-width="1.5" stroke-dasharray="3 3"/>
+          <text x="59" y="114" text-anchor="middle" fill="#8a93a3" font-family="JetBrains Mono" font-size="8">Google*</text>
+        </g>
+      </svg>
+    </div>
+
+    <div>
+      <div class="eyebrow">FREE · GITHUB PAGES + CLOUDFLARE</div>
+      <h1>Push new URLs to search engines the moment they exist.</h1>
+      <p>PingRadar notifies Bing, Yandex, Naver, Seznam and Yep instantly via the real IndexNow protocol — and gives backlink pages you don't own a discovery boost. It runs entirely on free infrastructure you control.</p>
+      <a href="#step1" class="btn btn-primary">Start verifying your site →</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="banner">
+      <strong>* About Google:</strong> Google does not support IndexNow or any free push-indexing API. No tool can guarantee instant Google indexing — anyone claiming otherwise is describing a probability booster, not a guarantee. This page is upfront about that and gives you the legitimate options instead.
+    </div>
+  </section>
+
+  <section id="step1">
+    <div class="section-head"><span class="step-num">1</span><h2>Verify your domain</h2></div>
+    <p class="section-sub">Required only for your own site — IndexNow needs proof you control it.</p>
+    <div class="card">
+      <div class="field">
+        <label for="domain-input">Your domain (no https://, no trailing slash)</label>
+        <input type="text" id="domain-input" placeholder="example.com" autocomplete="off">
+      </div>
+      <div class="field">
+        <label>IndexNow key</label>
+        <div class="keybox">
+          <span id="key-display">— generate a key —</span>
+          <button class="copy-btn" id="copy-key-btn">copy</button>
+        </div>
+        <p class="hint" id="key-instruction"></p>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <button class="btn btn-secondary" id="gen-key-btn">Generate key</button>
+        <button class="btn btn-primary" id="verify-btn">Verify ownership</button>
+      </div>
+      <div class="status-line" id="verify-status"><span class="status-dot"></span><span>Not verified yet</span></div>
+    </div>
+  </section>
+
+  <section id="step2">
+    <div class="section-head"><span class="step-num">2</span><h2>Submit URLs</h2></div>
+    <p class="section-sub">Choose which kind of URL you're submitting — the method is different for each.</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="own">My website</button>
+      <button class="tab" data-tab="backlink">Backlink pages (sites I don't own)</button>
+    </div>
+
+    <div class="tab-panel active" id="panel-own">
+      <div class="card">
+        <div class="field">
+          <label for="own-urls">URLs on your verified domain (one per line, up to 50)</label>
+          <textarea id="own-urls" placeholder="https://example.com/new-post&#10;https://example.com/product/123"></textarea>
+        </div>
+        <div id="turnstile-own" style="margin-bottom:14px;"></div>
+        <button class="btn btn-primary" id="submit-own-btn">Push to IndexNow</button>
+
+        <div class="engine-grid" id="engine-grid">
+          <div class="engine" id="engine-bing"><div class="engine-name">Bing</div><div class="engine-tag">indexnow</div></div>
+          <div class="engine" id="engine-yandex"><div class="engine-name">Yandex</div><div class="engine-tag">indexnow</div></div>
+          <div class="engine" id="engine-naver"><div class="engine-name">Naver</div><div class="engine-tag">indexnow</div></div>
+          <div class="engine" id="engine-seznam"><div class="engine-name">Seznam.cz</div><div class="engine-tag">indexnow</div></div>
+          <div class="engine" id="engine-yep"><div class="engine-name">Yep</div><div class="engine-tag">indexnow</div></div>
+          <div class="engine" id="engine-google"><div class="engine-name">Google</div><div class="engine-tag">manual only</div></div>
+        </div>
+
+        <div id="gsc-section" style="display:none;">
+          <p class="hint" style="margin-top:18px;">Google: open each URL in Search Console's URL Inspection tool and click "Request indexing" (official, free, manual):</p>
+          <div class="gsc-list" id="gsc-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-backlink">
+      <div class="card">
+        <div class="field">
+          <label for="backlink-title">Page title (internal label)</label>
+          <input type="text" id="backlink-title" placeholder="New backlinks — this week">
+        </div>
+        <div class="field">
+          <label for="backlink-urls">Backlink page URLs (one per line, up to 30)</label>
+          <textarea id="backlink-urls" placeholder="https://some-forum.com/profile/you&#10;https://guest-blog.example/your-article"></textarea>
+        </div>
+        <div id="turnstile-backlink" style="margin-bottom:14px;"></div>
+        <button class="btn btn-primary" id="submit-backlink-btn">Create discovery page</button>
+        <p class="hint" id="backlink-result"></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-head"><span class="step-num">3</span><h2>Activity log</h2></div>
+    <p class="section-sub">Stored locally to your browser's project id — only you see this list.</p>
+    <div class="card">
+      <div class="log" id="log-feed"><div class="empty-state">Nothing submitted yet from this browser.</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 style="margin-bottom:20px;">How this actually works</h2>
+    <div class="faq-item">
+      <h3>Why can't this push to Google directly?</h3>
+      <p>Google has never adopted the IndexNow protocol and has no public, free push-indexing API for ordinary pages. Its own Indexing API is restricted to job postings and livestream pages — using it for anything else risks Google flagging the account, so this tool doesn't attempt that. The honest path for Google is the sitemap you already maintain, plus manual "Request indexing" clicks in Search Console.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does the backlink discovery page help?</h3>
+      <p>It places your backlink URLs as real links on a Telegraph page — a domain search engines already crawl frequently. That gives crawlers a path to discover pages they wouldn't otherwise find quickly. It's a genuine technique used across the indexing-tool industry, but it's a probability boost, not a guarantee, and it can't substitute for a real backlink's own quality.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is my IndexNow key sensitive?</h3>
+      <p>No — it's published in a public text file on your own domain by design, so search engines can read it. Anyone with your key could submit IndexNow notifications for your domain on your behalf, which at worst causes unwanted re-crawls, not data exposure.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What stops someone from spamming this tool?</h3>
+      <p>Every request needs a passed Turnstile check, is rate-limited per IP, and — for your-own-site submissions — must pass live domain ownership verification before anything is sent to IndexNow.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>PingRadar — deploy your own copy, no accounts, no ads.</span>
+    <span class="mono">v1.0</span>
+  </footer>
+
+</div>
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
